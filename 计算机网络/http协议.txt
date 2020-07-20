@@ -1,0 +1,31 @@
+http的报文分为request报文和response报文
+1. request报文
+    第一行请求行，包括请求方法，url（统一资源定位符），http版本
+        请求方法有GET POST DELETE（删除文件） PUT（传送文件） HEAD（获取抱头）
+            GET和POST的区别，
+                从形式上看，GET使用url传参，而POST使用请求体传参，因此GET的数据就受到浏览器
+                所规定的url长度限制（http没有url长度限制），而POST没有限制；
+                从用途来看，GET用来向服务器请求静态资源或动态数据，POST用来提交数据如新建用户等；
+                GET较POST不安全，参数直接暴露；
+                GET请求可以被浏览器缓存、收藏、记录，POST不可缓存；
+                返回时POST会重新发起；
+
+    第二部分为请求头，包括ACCEPT、ACCEpt-CHARSET、COOKIE等信息
+        content-type包括: application/x-www-form-urlencoded, text/html, text/xml等等
+    然后空一行
+    第三部分请求体，存放页面表单中的组件值
+
+2. reponse报文
+    第一行为状态行，包括http版本和状态码
+        1xx：正在处理，需要客户端继续操作
+        2xx：请求被成功处理，如{200：成功}
+        3xx：需要重定向
+        4xx：客户端有错误{404：资源不存在，400：语法错误，405：方法不被允许}
+        5xx：服务器内部错误{500：服务器内部错误，502：网关失效}
+    第二部分为响应头
+    第三部分为响应体，返回服务器传送的文本信息
+
+3. http协议
+    http是无状态（）、无连接（）的
+    cookie，session
+    token、appid

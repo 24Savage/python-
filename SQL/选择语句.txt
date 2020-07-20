@@ -1,0 +1,2 @@
+case when ... then ... when ... then ... else ... end
+if(..., ..., ...)

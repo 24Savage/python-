@@ -1,0 +1,13 @@
+json对象指的是内存中可以用object.attribute的方式进行访问的一种对象
+在python中字典dict就是一种json对象，稍有不同的是标准json对象属性必须带双引号，true/false首字母小写，null表示空值
+
+json文本是指符合json格式的字符串
+
+使用json.dump()/dumps()进行字典到文本的转化,字符串是一种序列，因此较序列化
+使用json.load()/loads()进行文本到字典的转化,称为反序列化
+
+dump()支持把dict对象写入文件
+dumps()支持把dict对象转化成json文本
+
+load()支持把file-like-object转化成dict对象
+loads()支持json文本转化成dict对象
