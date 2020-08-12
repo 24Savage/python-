@@ -27,5 +27,13 @@ http的报文分为request报文和response报文
 
 3. http协议
     http是无状态（）、无连接（）的
-    cookie，session
-    token、appid
+3.1 cookie，session
+    cookie 和 session 的目的都是保存 user agent 的操作状态，记录用户名和密码就是由 cookie 实现的，网站购物车等功能通过 session 实现；
+    准确来说 session 是网络通讯中的一种机制，而 cookie 只是一种参与工具；
+    cookie 采用在客户端保存，就在 http 报文的 header 中，特点如下：
+        浏览器对 cookie 大小和数量均有限制；
+        其他网站也能访问你的网站的 cookie，不安全；
+    session 采用在服务端保存，可以保存在内存、文件或数据库中；
+    网站为每一个用户创建一个 session 对象，将对应的 session id 放在 cookie 中返回给用户；
+    当用户选择禁用 cookie 服务端会将 sid 写入到 URL 中；
+    session 不会因为浏览器关闭而删除；

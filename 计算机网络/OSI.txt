@@ -1,9 +1,0 @@
-OSI全称为open system interconnection reference model 开放系统互联参考模型，包括以下7层：
-应用层：http、ftp、smtp、DNS、telnet等等
-表示层
-会话层
-传输层：TCP、UDP
-网络层：IP、ICMP
-数据链路层
-物理层
-其中，上三层称为应用层，主要控制软件层面，下四层成为数据流层，管理硬件方面

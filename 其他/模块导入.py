@@ -3,10 +3,11 @@
 # __init__.py文件中显式声明__all__后，只能导入__all__中的.py文件
 
 import sys
-sys.path.append('.\\')
+from os.path import abspath, dirname, join
+
+sys.path.append(
+    join(abspath(dirname(__file__)), '..\\')
+)
 from testmodule import *
 
-
-obj = dir()
-print(obj)
-print(test1.__private())
+print(dir())

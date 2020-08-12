@@ -7,8 +7,8 @@ partition by + 字段 用来依据字段分组，
 2、滑动窗口函数
     实现滑动计算，需要在order by后添加rows between A and B来确定计算范围
     A，B为范围的左右边界，取值包括以下几种：
-        数字/unbounded + proceding 表示当前行以及其前几行/所有行
-        数字/unbounded + following 表示当前行以及其后几行/所有行
+        数字/unbounded + preceding 表示当前行前几行/所有行
+        数字/unbounded + following 表示当前行后几行/所有行
         current row 表示边界为当前行
-    例子：select sum() over (partition by 字段 rows between unbounded proceding and current row) as 逐步相加
+    例子：select sum() over (partition by 字段 rows between unbounded preceding and current row) as 逐步相加
         from 表名
