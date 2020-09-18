@@ -1,0 +1,21 @@
+关系型数据库：用关系模型存储数据的数据库，关系模型可简单理解为二维表格模型
+事务的ACID特性：
+    事务是一种机制，用来管理成批的 SQL 操作，为保证系统的完整性，需要具有 ACID 特性：
+    atomic：事务中的操作要么全完成要么全不完成
+    consistency：事务只能把数据库从一个有效（正确）的状态“转移”到另一个有效（正确）的状态，即数据必须满足定义的约束条件
+    isolation：并发事务间的具有有限的相互影响程度，并发事务可能的问题有：
+        脏读：事务 B 读取了提交失败的事务 A 的数据
+        幻读：A 事务能读到新加入的数据，前后结果不一致
+        不可重复读：B 事务删除数据，导致 A 读取结果前后不一致
+        隔离级别：
+            read uncommited RU：A 事务未提交的的修改可以被其他事务看见
+            read comitted RC：A 未提交的修改其他事务看不见，但可以看到其他事务的提交修改
+            repeated read RR：A 事务仅能看到开始时那一瞬间的数据快照，A 未提交的修改其他事务看不见，也看不见其他事务的提交修改
+            serialization：不允许读写并发操作，事务对某一行的操作会加锁，“写”会加“写锁”，“读”会加“读锁”
+    ddurability：事务对数据库的更改是永久性的
+怎么使用事务：
+    引擎区别：MyISAM 不支持事务，InnoDB支持事务
+    标识语句：
+        start transaction、rollback、commit、savepoint
+MySQL关键字的执行顺序：
+    from > where > group by > having > order by > select > partition by > limit

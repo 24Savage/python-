@@ -3,12 +3,12 @@
 class Singleton(object):
 
     def __new__(cls, *args, **kwargs):
+        print('new')
         if not hasattr(cls, '_instance'):
-            orig = super(Singleton, cls)
-            cls._instance = orig.__new__(cls, *args, **kwargs)
+            cls._instance = super(Singleton, cls).__new__(cls, *args, **kwargs)
         return cls._instance
 
-class MyClass():
+class MyClass(Singleton):
 
     def __init__(self):
         print('init')
@@ -16,4 +16,4 @@ class MyClass():
 
 a = MyClass()
 b = MyClass()
-print(id(a), id(b))
+print(a is b)

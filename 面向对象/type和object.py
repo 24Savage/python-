@@ -23,7 +23,6 @@ True
 
 # 使用isinstance判断对象是否属于某一类型的实例
 # 所有类型都是<class type>的实例
-# 也就是说所有类型都是type类型的实例
 >>>isinstance(Bird, type)
 True
 >>>isinstance(Bird, Creature)

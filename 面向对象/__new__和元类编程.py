@@ -4,7 +4,6 @@ class A:
     def __str__(self):
         return 'A'
 
-
 class B(object):
     def __new__(cls， *args): # 参数cls就是B类型
         '''返回一个实例'''

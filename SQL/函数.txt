@@ -1,0 +1,12 @@
+变量定义和赋值：
+    DECLARE 变量名 类型 DEFAULT 默认值;
+    SET 变量名=值;
+定义函数：
+    CREATE FUNCTION 函数名(参数名 类型) RETURNS 返回类型
+    BEGIN
+    RETURN (
+        write SQL statement      
+    );
+    END
+调用：
+    SELECT 函数名(参数) FROM TABLE
