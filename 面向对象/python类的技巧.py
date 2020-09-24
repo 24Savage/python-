@@ -31,6 +31,8 @@ class Circle():
         
     # @staticmethod 静态方法，参数没有self
     # @classmethod  类方法， 参数包括cls
+    # 查看对象信息 getattr hasattr dir .__dict__
+    # __dict__不显示父类的属性，这是和dir的区别
         
 if __name__ == '__main__':
     c = Circle( (1, 2),1)
