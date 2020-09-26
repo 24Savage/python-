@@ -1,0 +1,24 @@
+使用 ls -l 查看文件详细信息，例如：
+
+lrwxrwxrwx.   1 root root    7 Jul 28 13:23 bin -> usr/bin
+文件类型和权限分配  字节大小    OWNER   GROUP   日期    名称 链接
+
+文件类型：
+    {d：目录, -：文件, l：链接, d：可随机存取的设备, c：串行端口设备}  
+权限分配：  
+    后9位，分别代表拥有者(owner)、群组(group)、其他人(others)的权限
+    {r：read, w：write, x：execute}
+
+变更文件权限：
+chown
+    改变主人
+    chown [OPTION] OWNER FILE
+chgrp
+    改变组
+    chgrp [OPTION] GROUP FILE
+chmod
+    改变权限分配
+    chmod [-OPTION] xyz
+    {r:4, w:2, x:1}
+    
+    

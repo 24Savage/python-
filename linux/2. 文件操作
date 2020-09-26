@@ -1,0 +1,26 @@
+1 查看
+    pwd
+    clear
+    cd
+    ls
+    cat/tac（可以连接不同文件内容）
+    head 头几行
+    less 跟随键盘命令显示
+    more
+    tail 后几行
+
+2 创建
+    touch 创建空文件，改变时间戳
+    ln 为文件创建软链接或硬链接（symbolic or hard link）
+    mkdir
+
+3 移动或移除
+    rmdir
+    cp
+    rm
+    mv (可以重命名文件)
+
+
+OPTIONS：
+    善用 --help
+
